@@ -1,13 +1,15 @@
 
-import sampleData from "../../data/sampleData.json";
-import Header from "./Header";
+import { useStore } from "../store/store";
+import CategorySection from "./CategorySection";
+
 import ProductList from "./ProductList";
 
 export default function ProductPage() {
-    const { productGroupings, navigation } = sampleData;
-    console.log(navigation)
+    const { storeTempData, categoryData } = useStore(state=>state);
+
     return <>
-        <Header />
-        <ProductList data={productGroupings} />
+        <CategorySection data={categoryData} />
+        <ProductList data={storeTempData} />
+       
     </>
 }
