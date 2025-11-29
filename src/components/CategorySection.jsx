@@ -1,6 +1,6 @@
 export default function CategorySection({ data }) {
    
-    return <div className="bg-slate-100 sticky top-10 mb-4 flex items-center pr-8">
+    return <div className="bg-slate-100 sticky top-10 mb-4 flex items-center pr-8 z-10">
         <div className="flex gap-6 overflow-scroll py-3 lg:w-[80%] m-auto ">
             {data.map(item => <CategoryCard cardInfo={item} />)}
         </div>
