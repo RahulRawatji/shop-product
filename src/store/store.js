@@ -5,6 +5,7 @@ export const useStore = create((set,get) => ({
     filterValue: '',
     storeTempData:[],
     categoryData:[],
+    page:1,
     setFilterValue:(value)=>set((state)=>{
         let temp =[];
         if(value=='price'){
@@ -18,7 +19,11 @@ export const useStore = create((set,get) => ({
         }
         return {...state,filterValue:value,storeTempData:temp}
     }),
-    setStoreData: (value) => set((state)=>({...state, storeData:value,storeTempData:value.slice(0,10)})),
+    setStoreData: (value) => set((state)=>({...state, storeData:value, storeTempData:value.slice(0,10)})),
     setcategoryData: (value) => set((state)=>({...state, categoryData:value})),
-    // setTempData:()=>void
+    setTempData:()=>set((state)=>{
+        const tempData = get().storeData.slice(0,get().page*10);
+        return {...state,storeTempData:tempData}
+    }),
+    updatePage:()=>set(state=>({...state, page:get().page+1}))
 }))

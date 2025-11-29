@@ -1,7 +1,6 @@
 export default function ProductCard({ productInfo, idx }) {
     const { copy, colorwayImages, prices, productType ,displayColors} = productInfo[0] || {};
 
-    console.log(productInfo)
     return <>
         <div className="flex flex-col justify-center items-center w-[280px] md:w-[240px] md:h-[410px] lg:w-full lg:h-full overflow-hidden">
             <div className="bg-white flex justify-center">

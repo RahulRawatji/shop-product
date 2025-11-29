@@ -38,8 +38,8 @@ export default function FilterDrawer() {
 
     return <div className='fixed bottom-8 left-[36%] md:left-[45%] lg:hidden'>
 
-        <Button className='px-2 py-1' title='Filter and Sort' onClick={() => setShowDrawer(true)}>
-            <FaSort size={18} />
+        <Button className='px-3 py-2 bg-gray-300 bordered' title='Filter and Sort' onClick={() => setShowDrawer(true)}>
+            <FaSort size={18} className='text-md'/>
             Filter and Sort
         </Button>
 
