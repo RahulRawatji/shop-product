@@ -9,5 +9,5 @@ export default function CategorySection({ data }) {
 }
 
 function CategoryCard({ cardInfo }) {
-    return <span className="font-semibold px-2 text-xs">{cardInfo.displayText}</span>
+    return <span className="font-semibold px-2 text-xs cursor-pointer hover:scale-110 hover:text-gray-500">{cardInfo.displayText}</span>
 }

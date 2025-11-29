@@ -19,7 +19,7 @@ export default function ProductCard({ productInfo, idx }) {
     
     localStorage.setItem('favItem',JSON.stringify([...favItem]))
     return <>
-        <div className="flex flex-col justify-center items-center w-[280px] md:w-[240px] md:h-[410px] lg:w-full lg:h-full overflow-hidden">
+        <div className="flex flex-col justify-center items-center w-[280px] md:w-[240px] md:h-[410px] lg:w-full lg:h-full overflow-hidden cursor-pointer">
             <div className="bg-white flex justify-center relative">
                 <img src={colorwayImages.portraitURL} title={copy.title} />
                 <FaRegHeart className={`absolute right-8 top-4 hover:scale-110 cursor-pointer ${favItem.includes(productInfo[0].productCode) ?"text-red-500": ""}`} onClick={addToFavHandler}/>

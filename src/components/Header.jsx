@@ -6,9 +6,9 @@ export default function Header() {
             <div>
                 <h2 className="text-xl font-mono font-semibold p-2 text-black">Mike's Thrift</h2>
             </div>
-            <div className="flex gap-2 pr-3">
-                <FaRegUser className="text-black" size={20}/>
-                <FaCartShopping className="text-black" size={20} />
+            <div className="flex gap-3 pr-3">
+                <FaRegUser className="text-black" size={20} title="User"/>
+                <FaCartShopping className="text-black" size={20} title="Cart" />
             </div>
         </div>
     </>
